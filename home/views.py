@@ -12,8 +12,11 @@ routes = {
 
 
 def index(request):
-    var = {"first": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
-    return render(request, "home/index.html", context=var)
+    return render(request, "home/index.html")
+
+
+def gallery(request):
+    return render(request, "home/gallery.html")
 
 
 def num_router(request, page_num):
