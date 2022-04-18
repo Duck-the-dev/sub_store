@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.urls import reverse
+from static_precompiler.utils import compile_static
+compile_static("styles.scss")
 
 # Create your views here.
 
