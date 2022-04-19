@@ -36,6 +36,9 @@ def num_router(request, page_num):
         raise Http404("Page not found")
 
 
+def error_404(request, exception):
+    return render(request, '404.html', status=404)
+
 # def router(request, topic):
 #     try:
 #         return HttpResponse(str(routes[topic]))
