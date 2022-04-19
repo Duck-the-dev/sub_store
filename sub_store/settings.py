@@ -24,9 +24,9 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = 'django-insecure-cddm897frcse79!4rpyw7i!hl4hu-p+=^1=al-f!2l=idp&^tc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1"]
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -116,7 +116,6 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
-
 ]
 
 # Default primary key field type

@@ -7,7 +7,7 @@ from django.urls import reverse
 routes = {
 
     "gallery": "gallery",
-    "info": "info",
+    "contacts": "contacts",
 }
 
 
@@ -27,17 +27,24 @@ def gallery(request):
     return render(request, "home/gallery.html", context=nav_items)
 
 
-def num_router(request, page_num):
-    try:
-        routes_list = list(routes.keys())
-        route = routes_list[page_num]
-        return HttpResponseRedirect(reverse("page", args=[route]))
-    except Exception as e:
-        raise Http404("Page not found")
+def contacts(request):
+    path = request.path
+    nav_items = {"keys": routes,
+                 'path': path,
+                 }
+    return render(request, "home/contacts.html", context=nav_items)
+#
+# def num_router(request, page_num):
+#     try:
+#         routes_list = list(routes.keys())
+#         route = routes_list[page_num]
+#         return HttpResponseRedirect(reverse("page", args=[route]))
+#     except Exception as e:
+#         raise Http404("Page not found")
 
 
-def error_404(request, exception):
-    return render(request, '404.html', status=404)
+# def error_404(request, exception):
+#     return render(request, '404.html', status=404)
 
 # def router(request, topic):
 #     try:

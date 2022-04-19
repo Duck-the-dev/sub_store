@@ -24,4 +24,4 @@ urlpatterns = [
               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
-handler404 = 'home.views.error_404'
+# handler404 = 'home.views.error_404'
