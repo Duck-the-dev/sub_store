@@ -37,55 +37,59 @@
     ></script>
   </head>
   <body>
+    
     {% comment %} NavBar {% endcomment %}
-    <div id="navBar" class="container">
-      <header
-        class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
-      >
-      <a class="navbar-brand" href= {%url "store:home"%}>Woodenia</a>
+    <div class="container-fluid border-0">
+      <div id="navBar" class="container-fluid">
+        <header
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-evenly py-3 mb-4 border-bottom"
+        >
+        <a class="navbar-brand mb-0 h1" href= {%url "store:home"%}>Woodenia</a>
+          
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          ></button>
+          
+  
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            {% for key,value in keys.items %}
+            <li class="nav-item">
+                <a
+                {% if value in keys %}
+                class="nav-link px-2 link-dark"
+                aria-current="page"
+                {% if value not in path %}
+                href="/{{value}}" >{{key}}
+                {% else %}
+                href= '#'>{{key}}
+                {% endif %}
+                {% comment %} href= '#'>{{key}} {% endcomment %}
+                {% else %}
+                class="nav-link"
+                href= '#'>{{key}}
+                {% endif %}
+                </a>
+              </li>
+            {% endfor %}
         
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        ></button>
-        
-
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          {% for key,value in keys.items %}
-          <li class="nav-item">
-              <a
-              {% if value in keys %}
-              class="nav-link px-2 link-dark"
-              aria-current="page"
-              {% if value not in path %}
-              href="/{{value}}" >{{key}}
-              {% else %}
-              href= '#'>{{key}}
-              {% endif %}
-              {% comment %} href= '#'>{{key}} {% endcomment %}
-              {% else %}
-              class="nav-link"
-              href= '#'>{{key}}
-              {% endif %}
-              </a>
-            </li>
-          {% endfor %}
-      
-        </ul>
-
-        <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-outline-primary me-2">
-            Login
-          </button>
-          <button type="button" class="btn btn-primary">Sign-up</button>
-        </div>
-      </header>
+          </ul>
+  
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-outline-primary me-2">
+              Login
+            </button>
+            <button type="button" class="btn btn-primary">Sign-up</button>
+          </div>
+        </header>
+      </div>
     </div>
+   
     {% comment %} NavBar end {% endcomment %}
     {% block base %} 
     
