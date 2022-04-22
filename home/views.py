@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, Http404, HttpResponseRedirect
-from django.urls import reverse
+
 
 # Create your views here.
 
@@ -34,14 +34,9 @@ def contacts(request):
                  'path': path,
                  }
     return render(request, "home/contacts.html", context=nav_items)
+
 #
-# def num_router(request, page_num):
-#     try:
-#         routes_list = list(routes.keys())
-#         route = routes_list[page_num]
-#         return HttpResponseRedirect(reverse("page", args=[route]))
-#     except Exception as e:
-#         raise Http404("Page not found")
+
 
 
 # def error_404(request, exception):

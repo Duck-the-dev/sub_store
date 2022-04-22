@@ -97,24 +97,37 @@
 
     <div class="container-fluid">
       <footer class="py-3 my-4">
+
+
+
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+
+
           <li class="nav-item">
             <a href="#" class="nav-link px-2 text-muted">Home</a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Features</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">FAQs</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">About</a>
-          </li>
+          {% for key,value in keys.items %}
+            <li class="nav-item">
+                <a
+                {% if value in keys %}
+                class="nav-link px-2 text-muted"
+                {% if value not in path %}
+                href="/{{value}}" >{{key}}
+                {% else %}
+                href= '#'>{{key}}
+                {% endif %}
+                {% comment %} href= '#'>{{key}} {% endcomment %}
+                {% else %}
+                class="nav-link"
+                href= '#'>{{key}}
+                {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+
+          
         </ul>
-        <p class="text-center text-muted">© 2021 Company, Inc</p>
+        <p class="text-center text-muted">© 2022 Woodenia Company, Inc</p>
       </footer>
     </div>
   </body>
