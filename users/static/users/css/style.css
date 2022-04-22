@@ -2,6 +2,22 @@ body{
     background-color: #FFF3E4;
 }
 
+#sign1{
+  width: 40% ;
+
+ padding: 2rem 0rem;
+}
+#sign2{
+  width: 40% ;
+
+ padding: 2rem 0rem;
+}
+
+#login{
+  width: 40% ;
+
+ padding: 2rem 0rem;
+}
 
 #navBar {
       font-size: 18px;
