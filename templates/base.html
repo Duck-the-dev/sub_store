@@ -58,33 +58,29 @@
           
   
           <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            {% for key,value in keys.items %}
+          {% for key,value in keys.items %}
             <li class="nav-item">
                 <a
                 {% if value in keys %}
                 class="nav-link px-2 link-dark"
                 aria-current="page"
-                {% if value not in path %}
                 href="/{{value}}" >{{key}}
-                {% else %}
-                href= '#'>{{key}}
-                {% endif %}
                 {% comment %} href= '#'>{{key}} {% endcomment %}
                 {% else %}
-                class="nav-link"
+                class="nav-link px-2 link-dark"
                 href= '#'>{{key}}
                 {% endif %}
                 </a>
-              </li>
-            {% endfor %}
+             </li>
+          {% endfor %}
         
           </ul>
   
           <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">
-              Login
-            </button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
+          
+            <a class="btn btn-primary" href="/user/login/" role="button">Login</a>
+            <a class="btn btn-primary" href="/user/sign_up/" role="button">Sign Up</a>
+
           </div>
         </header>
       </div>
