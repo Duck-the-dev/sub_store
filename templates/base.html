@@ -56,30 +56,29 @@
             aria-label="Toggle navigation"
           ></button>
           
-  
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          {% for key,value in keys.items %}
-            <li class="nav-item">
-                <a
-                {% if value in keys %}
-                class="nav-link px-2 link-dark"
-                aria-current="page"
-                href="/{{value}}" >{{key}}
-                {% comment %} href= '#'>{{key}} {% endcomment %}
-                {% else %}
-                class="nav-link px-2 link-dark"
-                href= '#'>{{key}}
-                {% endif %}
-                </a>
-             </li>
-          {% endfor %}
         
-          </ul>
-  
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            {% for key,value in keys.items %}
+              <li class="nav-item">
+                  <a
+                  {% if value in keys %}
+                  class="nav-link px-2 link-dark"
+                  aria-current="page"
+                  href="/{{value}}" >{{key}}
+                  {% comment %} href= '#'>{{key}} {% endcomment %}
+                  {% else %}
+                  href= '#'>{{key}}
+                  {% endif %}
+                  </a>
+              </li>
+            {% endfor %}
+          
+            </ul>
+    
           <div class="col-md-3 text-end">
           
-            <a class="btn btn-primary" href="/user/login/" role="button">Login</a>
-            <a class="btn btn-primary" href="/user/sign_up/" role="button">Sign Up</a>
+            <a class="btn btn-primary" href="/login/" role="button">Login</a>
+            <a class="btn btn-primary" href="/sign_up/" role="button">Sign Up</a>
 
           </div>
         </header>
@@ -87,8 +86,10 @@
     </div>
    
     {% comment %} NavBar end {% endcomment %}
-    {% block base %} 
-    
+
+
+    {% block base %}
+
     {% endblock base%}
 
     <div class="container-fluid">
@@ -97,10 +98,8 @@
 
 
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-
-
           <li class="nav-item">
-            <a href="#" class="nav-link px-2 text-muted">Home</a>
+            <a href="/" class="nav-link px-2 text-muted">Home</a>
           </li>
           {% for key,value in keys.items %}
             <li class="nav-item">
@@ -121,7 +120,6 @@
               </li>
             {% endfor %}
 
-          
         </ul>
         <p class="text-center text-muted">© 2022 Woodenia Company, Inc</p>
       </footer>
