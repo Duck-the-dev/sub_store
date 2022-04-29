@@ -7,7 +7,7 @@ app_name = "users"
 
 urlpatterns = [
     path('login/', views.login, name="login"),
-    path('sign_up/', views.sign_up, name="sign_up"),
+    path('signup/', views.signup, name="signup"),
 
     # path('<int:page_num>', views.num_router, name="num_router"),
     # path('<str:topic>/<content>/', views.new_route),
