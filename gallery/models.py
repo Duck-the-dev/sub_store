@@ -9,7 +9,7 @@ class Product(models.Model):
     x = [('BENCHES','BENCHES'),('TABLES','TABLES'),]
     name = models.CharField(max_length=100)
     content= models.TextField(default='Foldable paper')
-    category=models.CharField(max_length=50,choices=x)
+    category=models.CharField(max_length=50,choices=x,default="wooden bench")
     price=models.DecimalField(max_digits=6,decimal_places=2)
     image=models.ImageField(upload_to='photos/%y/%m/%d')
     active=models.BooleanField(default=True)

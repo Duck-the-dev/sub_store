@@ -20,14 +20,6 @@ def index(request):
     return render(request, "home/index.html", context=nav_items)
 
 
-def gallery(request):
-    path = request.path
-    nav_items = {"keys": routes,
-                 'path': path,
-                 }
-    return render(request, "home/gallery.html", context=nav_items)
-
-
 def contacts(request):
     path = request.path
     nav_items = {"keys": routes,

@@ -9,7 +9,7 @@
   </div>
   {% comment %} ------ {% endcomment %}
   <form method = "POST" id = "sign2" class="row g-3 mx-auto">
-    {%csrf {% csrf_token %}
+    {%csrf_token%}
     <div class="col-md-6">
         <label for="first" class="form-label">First name</label>
         <input type="text"  id = "first" class="form-control" placeholder="First Name" aria-label="First Name">
