@@ -1,14 +1,14 @@
 from django.shortcuts import render
-from .models import product
+from .models import Product
 
 
 
-def product (request):
+def product(request):
     return render (request, 'gallery/product.html')
 
 
-def gallery (request):
-    return render (request, 'gallery/gallery.html', {'pro':product.objects.all()})
+def gallery(request):
+    return render (request, 'gallery/gallery.html', {'pro':Product.objects.all()})
 
 
 
