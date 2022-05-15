@@ -1,8 +1,6 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render
-from django.urls import reverse
-from .models import Login, Signup
-
+from .models import Login,Signup 
 # Create your views here.
 
 out_of_nav_routes = {
@@ -11,7 +9,7 @@ out_of_nav_routes = {
 }
 
 
-def login(request):
+def Login(request):
     email_adress = request.POST.get('email_address')
     password = request.POST.get('password')
 
@@ -20,33 +18,24 @@ def login(request):
 
     return render(request, "users/login.html", {"keys": out_of_nav_routes})
 
-    # path = request.path
-    # method_items = {"keys": out_of_nav_routes,
-    #              'path': path,
-    #              }
-    # return render(request, "users/login.html", context=method_items)
+    
 
-
-def signup(request):
+def Signup(request):
+         
     FirstName = request.POST.get('FirstName')
     LastName = request.POST.get('LastName')
-    Password = request.POST.get('password')
+    Password = request.POST.get('Password')
+    email = request.POST.get('email')
     address = request.POST.get('address')
     address2 = request.POST.get('address2')
     city = request.POST.get('city')
     state = request.POST.get('state')
-
-    # data = Signup(FirstName=FirstName, LastName=LastName, Password=Password, address=address, address2=address2,
-    #               city=city, state=state)
-    # data.save()
+    data = Signup( FirstName= FirstName,LastName=LastName, Password=Password,email=email,address=address,address2=address2,city=city,state=state)
+    data.save()
 
     return render(request, "users/sign-up.html", {"keys": out_of_nav_routes})
 
-    # path = request.path
-    # method_items = {"keys": out_of_nav_routes,
-    #                'path': path,
-    #                }
-    # return render(request, "users/sign-up.html", context=method_items)
+    
 
 
 def redirect(request):
