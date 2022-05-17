@@ -5,8 +5,6 @@ from django.http import HttpResponse, Http404, HttpResponseRedirect
 # Create your views here.
 
 routes = {
-
-    "gallery": "gallery",
     "contacts": "contacts",
 
 }

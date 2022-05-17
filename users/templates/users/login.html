@@ -6,7 +6,7 @@
 
 {% block base %}
 
-<div id = "login" class="container-xl">
+<div id = "login" class="container-fluid align-items-center justify-content-center justify-content-center text-center mx-auto">
 <form method = "POST" class="row g-3 mx-auto" action="">
   {%csrf_token%}
     <div class="form-floating">
@@ -21,7 +21,6 @@
         <button type="submit" class="btn btn-secondary bg-dark">Sign In</button>
       </div>
 </form>
-   
 </div>
 
 

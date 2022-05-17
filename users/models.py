@@ -5,10 +5,6 @@ from django.db import models
 class Login(models.Model):
     email_address = models.EmailField(max_length=120, null=True, validators=[validate_email])
     password = models.CharField(max_length=20, null=True)
-    
-    
-    def __str__(self):
-        return self.FirstName + ' ' + self.LastName
 
 
 class Signup(models.Model):
