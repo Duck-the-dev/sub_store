@@ -9,7 +9,7 @@ out_of_nav_routes = {
 }
 
 
-def Login(request):
+def login(request):
     # email_adress = request.POST.get('email_address')
     # password = request.POST.get('password')
     #
@@ -19,7 +19,7 @@ def Login(request):
     return render(request, "users/login.html", {"keys": out_of_nav_routes})
 
 
-def Signup(request):
+def signup(request):
     # FirstName = request.POST.get('FirstName')
     # LastName = request.POST.get('LastName')
     # Password = request.POST.get('Password')

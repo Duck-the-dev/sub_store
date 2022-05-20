@@ -1,15 +1,23 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block base %}
 
 <div id="product" class="position-relative overflow-hidden p-3 p-md-3 m-md-3 text-center">
+
     <div class="col-md-5 p-lg-5 mx-auto my-5">
+     <div id = "wood">
+      <img id = "wood" class = "position-absolute top-20 start-0 opacity-25 float-sm-start"src="{% static "home/b.png" %}" alt="wooden benche">
+      <img id = "wood" class = "position-absolute bottom-0 end-0 opacity-25 float-sm-end"src="{% static "home/b.png" %}" alt="wooden benche">
+     </div>
+
       <h1 class="display-6 fw-normal shadow-sm p-3 mb-5 bg-body rounded">SHOP WITH CONSCIOUS</h1>
       <p id = 'slog' class="lead fw-normal">At WOODENIA we are passionate about using eco-friendly and sustainable materials to build our furniture. <br> <br> We have ultra-modern products, like stools and benches, as well as felt top accessories for ultimate comfort. <br> WOODENIA is unique in that we make paper furniture. <br> <br> Our standout furniture is guaranteed to make your living room, office lobby and any living space eye-catching. All our products are affordable, and we offer deliveries to destinations across Egypt.</p>
-      <a class="btn btn-outline-secondary" href="#">Coming soon</a>
+      <a class="btn btn-outline-secondary" href="#">Order now</a>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    
+    
+    {% comment %} <div class="product-device shadow-sm d-none d-md-block"></div>
+    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> {% endcomment %}
   </div>
 
 

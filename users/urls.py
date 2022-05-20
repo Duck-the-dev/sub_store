@@ -6,8 +6,8 @@ from django.conf.urls.static import static
 app_name = "users"
 
 urlpatterns = [
-    path('login/', views.Login, name="login"),
-    path('signup/', views.Signup, name="signup"),
+    path('login/', views.login, name="login"),
+    path('signup/', views.signup, name="signup"),
 
     # path('<int:page_num>', views.num_router, name="num_router"),
     # path('<str:topic>/<content>/', views.new_route),
