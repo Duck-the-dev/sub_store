@@ -1,189 +1,279 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block base %}
+{% extends 'base.html' %} {% load static %} {% block base %}
 
-<div id="product" class="position-relative overflow-hidden p-3 p-md-3 m-md-3 text-center">
-
-    <div class="col-md-5 p-lg-5 mx-auto my-5">
-     <div id = "wood">
-      <img id = "wood" class = "position-absolute top-20 start-0 opacity-25 float-sm-start"src="{% static "home/b.png" %}" alt="wooden benche">
-      <img id = "wood" class = "position-absolute bottom-0 end-0 opacity-25 float-sm-end"src="{% static "home/b.png" %}" alt="wooden benche">
-     </div>
-
-      <h1 class="display-6 fw-normal shadow-sm p-3 mb-5 bg-body rounded">SHOP WITH CONSCIOUS</h1>
-      <p id = 'slog' class="lead fw-normal">At WOODENIA we are passionate about using eco-friendly and sustainable materials to build our furniture. <br> <br> We have ultra-modern products, like stools and benches, as well as felt top accessories for ultimate comfort. <br> WOODENIA is unique in that we make paper furniture. <br> <br> Our standout furniture is guaranteed to make your living room, office lobby and any living space eye-catching. All our products are affordable, and we offer deliveries to destinations across Egypt.</p>
-      <a class="btn btn-outline-secondary" href="#">Order now</a>
+<div
+  id="product"
+  class="position-relative overflow-hidden p-3 p-md-3 m-md-3 text-center"
+>
+  <div class="col-md-5 p-lg-5 mx-auto my-5">
+    <div id="wood">
+      <img id = "wood" class = "position-absolute top-20 start-0 opacity-25
+      float-sm-start"src="{% static "home/b.png" %}" alt="wooden benche"> <img
+      id = "wood" class = "position-absolute bottom-0 end-0 opacity-25
+      float-sm-end"src="{% static "home/b.png" %}" alt="wooden benche">
     </div>
-    
-    
-    {% comment %} <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div> {% endcomment %}
+
+    <h1 class="display-6 fw-normal shadow-sm p-2 mb-5 bg-body rounded">
+      SHOP WITH CONSCIOUS
+    </h1>
+    <p id="slog" class="lead fw-normal">
+      At WOODENIA we are passionate about using eco-friendly and sustainable
+      materials to build our furniture. <br />
+      <br />
+      We have ultra-modern products, like stools and benches, as well as felt
+      top accessories for ultimate comfort. <br />
+      WOODENIA is unique in that we make paper furniture. <br />
+      <br />
+      Our standout furniture is guaranteed to make your living room, office
+      lobby and any living space eye-catching. All our products are affordable,
+      and we offer deliveries to destinations across Egypt.
+    </p>
+    <br />
+    <a class="btn btn-outline-secondary" href="#">Order now</a>
   </div>
 
+  {% comment %}
+  <div class="product-device shadow-sm d-none d-md-block"></div>
+  <div
+    class="product-device product-device-2 shadow-sm d-none d-md-block"
+  ></div>
+  {% endcomment %}
+</div>
 
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
-  <style>
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+{% comment %} ------ {% endcomment %}
 
-    .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+<div class="container-fluid p-5 mb-auto mx-auto marketing">
+  <!-- START THE FEATURETTES -->
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    
-  </style>
-  {% comment %} ------ {% endcomment %}
+  <hr class="featurette-divider" />
 
-  <div class="container marketing">
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading">FOLDABLE PAPER BENCH. <span class="text-muted">NEW!</span></h2>
-        <p> </p>
-        <p> </p>
-        <p class="lead">can be used as a regular of innovation furniture.</p>
-        <p class="lead">COLOR: YELLOW.</p>
-        <p class="lead">PRICE: 1170 LE.</p>
-        <p class="lead">SIZE: LARGE (300cm x 38cm).</p>
-        
+  <div class="row featurette container-fluid">
+    <div class="col-md-7">
+      <div
+        class="featurette-heading text-muted display-6 fw-normal shadow-sm p-2 mb-5 rounded"
+      >
+        FOLDABLE PAPER BENCH. <small class="fs-4"> NEW ARRIVAL!</small>
       </div>
-      <div class="col-md-5">
-        <img class="f" src="/static/home/yellow.jpg" width="500"height="500" >
+      <br /><br />
+
+      <div class = "display-6 fw-normal shadow-sm p-2 mb-5 rounded">
+      <p class="lead">can be used as a regular of innovation furniture.</p>
+      <p class="lead">COLOR: YELLOW.</p>
+      <p class="lead">PRICE: 1170 LE.</p>
+      <p class="lead">SIZE: LARGE (300cm x 38cm).</p>
 
       </div>
+
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="text-muted">NEW ARRIVAL! <span class="featurette-heading">FOLDABLE PAPER BENCH.</span></h2>
-        <p> </p>
-        <p> </p>
-        <p class="lead">our ECO friendly product.</p>
-        <p > </p>
-        <p class="lead">PRICE: 1170 LE.</p>
-        <p class="lead">COLOR: BABYBLUE.</p>
-        <p class="lead">SIZE: LARGE (300cm x 38cm).</p>
-        
-      </div>
-      <div class="col-md-5 order-md-1">
-        <img class="f" src="/static/home/babyblue.jpg" width="500"height="500" >
-      </div>
+    <div class="col-md-5">
+      <img
+        class="f img-fluid shadow-sm p-2 mb-5 rounded"
+        src="/static/home/yellow.jpg"
+        width="500"
+        height="500"
+      />
     </div>
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="text-muted">NEW ARRIVAL! <span class="featurette-heading">FOLDABLE PAPER BENCH.</span></h2>
-        <p> </p>
-        <p> </p>
-        <p class="lead">our ECO friendly product.</p>
-        <p > </p>
-        <p class="lead">PRICE: 1170 LE.</p>
-        <p class="lead">COLOR: GREEN.</p>
-        <p class="lead">SIZE: LARGE (300cm x 38cm).</p>
-        
-      </div>
-      <div class="col-md-5 order-md-1">
-      </div>
-      <div class="col-md-5">
-        <img class="f" src="/static/home/green.jpg" width="500"height="500" > 
-      </div>
-    </div>
-
-    <hr class="featurette-divider">
-
-    <!-- /END THE FEATURETTES -->
-
   </div>
-{% endblock base %}
 
+  <hr class="featurette-divider" />
 
+  <div class="row featurette container-fluid">
+    <div class="col-md-7 order-md-2">
+      <div
+        class="featurette-heading text-muted display-6 fw-normal shadow-sm p-2 mb-5 rounded"
+      >
+        FOLDABLE PAPER BENCH. <small class="fs-4"> NEW ARRIVAL!</small>
+      </div>
+      <br /><br />
+      <p class="lead">our ECO friendly product.</p>
+      <br />
+      <div class = "display-6 fw-normal shadow-sm p-2 mb-5 rounded">
+        
+              <p class="lead">PRICE: 1170 LE.</p>
+      <p class="lead">COLOR: BABYBLUE.</p>
+      <p class="lead">SIZE: LARGE (300cm x 38cm).</p>
+      </div>
 
-
-
-
-
-
-{% comment %} <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+    <div class="col-md-5 order-md-1">
+      <img class="f img-fluid shadow-sm p-2 mb-5 rounded" src="/static/home/babyblue.jpg" width="500" height="500" />
+    </div>
+  </div>
 
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
+  <hr class="featurette-divider" />
+
+  <div class="row featurette container-fluid">
+    <div class="col-md-7">
+      <div
+        class="featurette-heading text-muted display-6 fw-normal shadow-sm p-2 mb-5 rounded"
+      >
+        FOLDABLE PAPER BENCH. <small class="fs-4"> NEW ARRIVAL!</small>
       </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+      <br /><br />
+      <p class="lead">our ECO friendly product.</p>
+      <br />
+      <div class = "display-6 fw-normal shadow-sm p-2 mb-5 rounded">
 
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
+           <p class="lead">PRICE: 1170 LE.</p>
+      <p class="lead">COLOR: GREEN.</p>
+      <p class="lead">SIZE: LARGE (300cm x 38cm).</p>
       </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+   
+    </div>
+    <div class="col-md-5 order-md-1"></div>
+    <div class="col-md-5">
+      <img class="f img-fluid shadow-sm p-2 mb-5 rounded" src="/static/home/green.jpg" width="500" height="500" />
+    </div>
+  </div>
 
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
+  <hr class="featurette-divider" />
+
+  <!-- /END THE FEATURETTES -->
+</div>
+{% endblock base %} {% comment %}
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+</style>
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button
+      type="button"
+      data-bs-target="#myCarousel"
+      data-bs-slide-to="0"
+      class="active"
+      aria-current="true"
+      aria-label="Slide 1"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#myCarousel"
+      data-bs-slide-to="1"
+      aria-label="Slide 2"
+    ></button>
+    <button
+      type="button"
+      data-bs-target="#myCarousel"
+      data-bs-slide-to="2"
+      aria-label="Slide 3"
+    ></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <svg
+        class="bd-placeholder-img"
+        width="100%"
+        height="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      >
+        <rect width="100%" height="100%" fill="#777" />
+      </svg>
+
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <h1>Example headline.</h1>
+          <p>
+            Some representative placeholder content for the first slide of the
+            carousel.
+          </p>
+          <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div> {% endcomment %}
+    <div class="carousel-item">
+      <svg
+        class="bd-placeholder-img"
+        width="100%"
+        height="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      >
+        <rect width="100%" height="100%" fill="#777" />
+      </svg>
 
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Another example headline.</h1>
+          <p>
+            Some representative placeholder content for the second slide of the
+            carousel.
+          </p>
+          <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <svg
+        class="bd-placeholder-img"
+        width="100%"
+        height="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        preserveAspectRatio="xMidYMid slice"
+        focusable="false"
+      >
+        <rect width="100%" height="100%" fill="#777" />
+      </svg>
 
-  
+      <div class="container">
+        <div class="carousel-caption text-end">
+          <h1>One more for good measure.</h1>
+          <p>
+            Some representative placeholder content for the third slide of this
+            carousel.
+          </p>
+          <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#myCarousel"
+    data-bs-slide="prev"
+  >
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#myCarousel"
+    data-bs-slide="next"
+  >
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+{% endcomment %}
