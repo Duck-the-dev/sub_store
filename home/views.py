@@ -1,13 +1,22 @@
 from django.shortcuts import render
+from django.views.generic import CreateView
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 
-
 # Create your views here.
+from home.forms import SupportForm
+from home.models import Support
 
 routes = {
     "contacts": "contacts",
 
 }
+
+
+class Support(CreateView):
+    model = Support
+    form_class = SupportForm
+    # fields = '__all__'
+    template_name = 'home/contacts.html'
 
 
 def index(request):
@@ -17,16 +26,7 @@ def index(request):
                  }
     return render(request, "home/index.html", context=nav_items)
 
-
-def contacts(request):
-    path = request.path
-    nav_items = {"keys": routes,
-                 'path': path,
-                 }
-    return render(request, "home/contacts.html", context=nav_items)
-
 #
-
 
 
 # def error_404(request, exception):

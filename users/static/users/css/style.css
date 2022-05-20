@@ -79,7 +79,7 @@ border:  none;
     z-index: 10000 !important;
   }
  #wood{
-   z-index: 1000 !important;
+   z-index: 10000 !important;
  }
   /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */

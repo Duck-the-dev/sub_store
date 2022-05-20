@@ -1,6 +1,5 @@
 from django.http import HttpResponse, Http404, HttpResponseRedirect
 from django.shortcuts import render,reverse
-from .models import Login, Signup
 
 # Create your views here.
 

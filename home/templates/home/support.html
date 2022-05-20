@@ -1,0 +1,11 @@
+
+
+<form method="POST">
+    {% csrf_token %}
+  <div class="container-sm my-1 mx-auto align-items-center justify-content-center justify-content-evenly text-center">
+    <div class="form-group">{{form.as_p}}</div>
+    <br>
+    <button type="submit" class="btn btn-secondary">submit</button>
+  </div>
+</form>
+
