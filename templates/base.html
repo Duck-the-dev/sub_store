@@ -1,3 +1,4 @@
+{% load admin_list %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -65,15 +66,36 @@
                  
 
                   </a>
+                  
               </li>
+              {% if user.is_authenticated %}
+
+              <li class="nav-item">
+                <a
+               
+                class="nav-link px-2 link-dark"
+                aria-current="page"
+                href="/orders" >Orders
+               
+
+                </a>
+                
+            </li>
+              {% endif %}
           
           
             </ul>
     
           <div class="col-md-3 text-end">
+          {% if user.is_authenticated %}
+            <h5>hey {{user.username}}</h5>
+            <p><a class="btn btn-light" href="{% url 'logout' %}">Log Out</a></p>
+
+            {% else %}
+            <a class="btn btn-secondary bg-dark" href="{% url 'login' %}" role="button">Login</a>
+
+          {% endif %}
           
-            <a class="btn btn-secondary bg-dark" href="/login/" role="button">Login</a>
-            <a class="btn btn-secondary bg-dark" href="/signup/" role="button">Sign Up</a>
 
           </div>
         </header>

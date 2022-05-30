@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block base %}
+
+
+<div class="container-fluid border fw-normal shadow-sm p-2 mb-5 rounded d-flex flex-wrap align-items-center justify-content-center justify-content-md-evenly mx-auto py-3 mb-4">
+    <h3 class="container-fluid d-flex flex-wrap align-items-center justify-content-center justify-content-md-evenly mx-auto py-3 mb-4">Delete To-do Item</h3>
+
+    <p>Are you sure you want to delete the item
+       from your list ?</p>
+     <div class="container-fluid d-flex flex-wrap align-items-center justify-content-center justify-content-md-evenly mx-auto py-3 mb-4">
+
+
+        <form method="POST">
+            {% csrf_token %}
+            <input 
+                class="btn btn-secondary"
+                value="Yes, delete."
+                type="submit">
+            <input
+                class="btn btn-light"
+                value="Cancel"
+                type="button"
+                onclick="location.href='{% url "store:orders" %}';">
+        </form>
+    
+     </div>
+    
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends 'base.html' %} 
+{% load static %}
+{% block base %}
+
+<div class="d-flex justify-content-evenly img-fluid ">
+    <div class="col-md-2">
+        <img
+          class="f img-fluid shadow-sm p-2 mb-5 rounded"
+          src="/static/home/yellow.jpg"
+          width="500"
+          height="500"
+        />
+      </div>
+  <div class="col-md-2">
+    <img
+      class="f img-fluid shadow-sm p-2 mb-5 rounded"
+      src="/static/home/babyblue.jpg"
+      width="500"
+      height="500"
+    />
+  </div>
+  <div class="col-md-2">
+    <img
+      class="f img-fluid shadow-sm p-2 mb-5 rounded"
+      src="/static/home/green.jpg"
+      width="500"
+      height="500"
+    />
+  </div>
+</div>
+<form id = "sign2"  class = "d-flex shadow p-3 mb-5 rounded bg-body row g-3 mx-auto justify-content-evenly"method="POST">
+  {% csrf_token %}
+  <div class="container-fluid p-1 mx-auto col-md-12">
+    <div class="form-group">
+        
+        <div class = "py-1">Color
+
+    </div>  
+    {{ form.colors }}
+</div>
+    </div>
+
+
+    <div class="container-fluid p-1 mx-auto col-md-6">
+        <div class="form-group">
+            
+            <div class = "py-1">First name
+    
+        </div>  
+        {{ form.first_name }}
+    </div>
+        </div>
+        <div class="container-fluid p-1 mx-auto col-md-6">
+            <div class="form-group">
+                
+                <div class = "py-1">Last name
+        
+            </div>  
+            {{ form.last_name }}
+        </div>
+            </div>
+            <div class="container-fluid p-1 mx-auto col-md-12">
+                <div class="form-group">
+                    
+                    <div class = "py-1">Email
+            
+                </div>  
+                {{ form.email }}
+            </div>
+                </div>
+  
+                <div class="container-fluid p-1 mx-auto col-md-12">
+                    <div class="form-group">
+                        
+                        <div class = "py-1">Address
+                
+                    </div>  
+                    {{ form.address }}
+                </div>
+                    </div>
+                    <div class="container-fluid p-1 mx-auto col-md-12">
+                        <div class="form-group">
+                            
+                            <div class = "py-1">Address 2
+                    
+                        </div>  
+                        {{ form.address2 }}
+                    </div>
+                        </div>
+
+                        <div class="container-fluid p-1 mx-auto col-md-12">
+                            <div class="form-group">
+                                
+                                <div class = "py-1">State
+                        
+                            </div>  
+                            {{ form.state }}
+                        </div>
+                            </div>
+                            <div class="container-fluid p-1 mx-auto col-md-12">
+                                <div class="form-group">
+                                    
+                        
+                            
+                                </div>  
+                                {{ form.user }}
+                            </div>
+    <div class="col-12">
+        <br>
+      <button type="submit" class="btn btn-secondary bg-dark d-inline container-sm p-3 my-1 mx-auto align-items-center justify-content-center justify-content-evenly text-center">Submit</button>
+    </div>
+</form>
+{% endblock base %}

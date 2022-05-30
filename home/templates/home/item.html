@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block base %}
+{% if object %}
+
+<div class ="container-sm my-1 mx-auto align-items-center justify-content-center justify-content-evenly text-center">
+    <input
+    class="btn btn-secondary"
+
+    value="Edit this item"
+    type="button"
+    onclick="location.href=
+    '{% url "store:item-update" object.id %}'">
+
+<input                 class="btn btn-secondary"
+
+    value="Delete this item"
+    type="button"
+    onclick="location.href=
+    '{% url "store:item-delete" object.id %}'">
+
+
+</div>
+
+{% endif %}
+
+{% endblock base %}

@@ -1,13 +1,15 @@
-from django.urls import path
+from django.urls import path,include
 from users import views
 from django.conf import settings
 from django.conf.urls.static import static
 
-app_name = "users"
+from users.views import Login
+
+app_name = "registration"
 
 urlpatterns = [
-    path('login/', views.login, name="login"),
-    path('signup/', views.signup, name="signup"),
+    path('login/', Login.as_view, name="l"),
+    # path('accounts/', include('allauth.urls')),
 
     # path('<int:page_num>', views.num_router, name="num_router"),
     # path('<str:topic>/<content>/', views.new_route),
